@@ -1,0 +1,26 @@
+group-chat {
+  $grid-padding-width: 50px;
+
+  ion-card {
+    img {
+      border-radius: 50%;
+      width: 50%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    &.card h2 {
+      font-size: 1.4rem;
+      text-align: center;
+    }
+    &.card .note-md {
+      font-size: 0.9em;
+      text-align: center;
+      display: block;
+      margin-bottom: 25px;
+
+      &.participants {
+        margin: 20px auto 15px;
+      }
+    }
+  }
+}

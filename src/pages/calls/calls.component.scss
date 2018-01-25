@@ -1,0 +1,19 @@
+calls {
+  .call-icons {
+    margin-right: 10px !important;
+    font-size: 2.1rem;
+
+    &.phone {
+      margin-left: 25px !important;
+      margin-right: 25px !important;
+    }
+  }
+
+  ion-list-header {
+    border-top: none !important;
+  }
+
+  .m-b-none {
+    margin-bottom: 0px;
+  }
+}

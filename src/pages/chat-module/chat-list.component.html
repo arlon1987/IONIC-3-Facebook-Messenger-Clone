@@ -1,0 +1,26 @@
+<ion-content>
+        <ion-refresher (ionRefresh)="doRefresh($event)">
+                <ion-refresher-content></ion-refresher-content>
+        </ion-refresher>
+        <ion-fab bottom right>
+                <button ion-fab (click)="newMessage()">
+                        <ion-icon class="fa fa-comment"></ion-icon>
+                </button>
+        </ion-fab>
+
+        <ion-list no-lines>
+                <ion-item *ngFor="let conversation of conversations">
+                        <ion-avatar item-left (click)="openChat(conversation.otherName)">
+                                <img src="{{conversation.otherAvatar}}" [ngClass]="conversation.otherOnlineStatus">
+                                <ion-icon class="fa fa-check-circle" color="primary"></ion-icon>
+                        </ion-avatar>
+                        <h2 (click)="openChat(conversation.otherName)">{{conversation.otherName}}</h2>
+                        <p [ngClass]="['last-message', conversation.amLastSender.toString()]"
+                           (click)="openChat(conversation.otherName)">{{conversation.lastMessage}}</p>
+    <span item-right text-right>
+            <small>{{conversation.lastMessageTime}}</small><br>
+            <small item-right><span [ngClass]="['read-status', conversation.otherReadStatus]"></span></small>
+    </span>
+                </ion-item>
+        </ion-list>
+</ion-content>

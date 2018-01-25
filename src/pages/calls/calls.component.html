@@ -1,0 +1,30 @@
+<ion-content>
+        <ion-fab bottom right>
+                <button ion-fab (click)="newCall()">
+                        <ion-icon name="call"></ion-icon>
+                </button>
+        </ion-fab>
+
+        <ion-item no-lines>
+                <ion-icon name="people" color="primary" item-left></ion-icon>
+                <h2>Start Group Call</h2>
+        </ion-item>
+
+        <ion-list-header class="m-b-none">Recent</ion-list-header>
+        <ion-list no-lines>
+                <ion-item *ngFor="let call of calls">
+                        <ion-avatar item-left (click)="startPhoneCall()">
+                                <img src="{{call.otherAvatar}}" [ngClass]="call.otherOnlineStatus">
+                        </ion-avatar>
+                        <h2 (click)="startPhoneCall()">{{call.otherName}}</h2>
+                        <p [ngClass]="['missed-call']" (click)="startPhoneCall()">
+                                <ion-icon name="arrow-down"></ion-icon>
+                                {{ 200000000000 | timesince }}
+                        </p>
+                        <ion-icon (click)="startPhoneCall()" class="call-icons phone" color="primary" name="call" item-right></ion-icon>
+                        <ion-icon (click)="startVideoCall()" class="call-icons" color="primary" name="videocam" item-right mode="ios"></ion-icon>
+                </ion-item>
+        </ion-list>
+
+        <ion-list-header>Suggested</ion-list-header>
+</ion-content>

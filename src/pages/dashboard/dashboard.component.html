@@ -1,0 +1,14 @@
+<ion-header no-shadow no-border>
+        <ion-toolbar color="primary">
+                <ion-searchbar placeholder="{{searchText}}"></ion-searchbar>
+        </ion-toolbar>
+</ion-header>
+<ion-content no-bounce>
+        <super-tabs toolbarBackground="primary" toolbarColor="light" indicatorColor="light">
+                <super-tab [root]="chatList" icon="home"></super-tab>
+                <super-tab [root]="calls" icon="call"></super-tab>
+                <super-tab [root]="groupChat" icon="people"></super-tab>
+                <super-tab [root]="mContacts" icon="list"></super-tab>
+                <super-tab [root]="account" icon="person"></super-tab>
+        </super-tabs>
+</ion-content>

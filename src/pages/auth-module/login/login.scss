@@ -1,0 +1,29 @@
+page-login {
+
+  .button-md {
+    text-transform: initial;
+    border-radius: 4px;
+    height: auto;
+    width: 90%;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-top: 30px;
+    }
+
+    .button-inner {
+      padding: 20px 20px;
+      font-size: 1.1em;
+      justify-content: left;
+
+      ion-icon {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .scroll-content {
+    background-color: #f2f2f2;
+  }
+
+}

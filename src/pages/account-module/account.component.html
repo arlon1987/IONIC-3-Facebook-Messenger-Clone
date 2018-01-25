@@ -1,0 +1,55 @@
+<ion-content>
+        <ion-item class="profile-pic">
+                <ion-avatar>
+                        <img src="assets/images/mike.png" alt="Profile Pic"/>
+                </ion-avatar>
+                <h1 padding-top text-center> Sean Miller </h1>
+        </ion-item>
+
+        <ion-list no-padding>
+                <ion-item>
+                        <ion-icon name="mail" color="primary" item-left></ion-icon>
+                        <h2>Username</h2>
+                        <p><ion-note>cool.me/</ion-note>@sean.doe</p>
+                </ion-item>
+                <ion-item (click)="goto(routes.PHONE_NUMBERS)">
+                        <ion-icon name="call" color="primary" item-left></ion-icon>
+                        <h2>Phone number</h2>
+                        <p>[carrier-icon] (214) 334-1437</p>
+                </ion-item>
+        </ion-list>
+        <ion-list no-padding>
+                <ion-item>
+                        <ion-icon name="card" color="primary" item-left></ion-icon>
+                        <h2>Payment</h2>
+                        <p>[visa-icon] Card ****0001</p>
+                        <p>[bank-icon] PNC Bank ****0002</p>
+                </ion-item>
+                <ion-item>
+                        <ion-icon name="share" color="primary" item-left></ion-icon>
+                        <h2>Social</h2>
+                        <p>[facebook-icon] John Doe</p>
+                        <p>[twitter-icon] Johnny D.</p>
+                </ion-item>
+                <ion-item (click)="goto(routes.NOTIFICATION_SETTINGS)">
+                        <ion-icon name="notifications" color="primary" item-left></ion-icon>
+                        <h2>Notifications & Sound </h2>
+                        <p>Email, Text & Push notification settings</p>
+                </ion-item>
+                <ion-item>
+                        <ion-icon name="people" color="primary" item-left></ion-icon>
+                        <h2>People</h2>
+                        <p>Feed, Blocked, Sync contacts</p>
+                </ion-item>
+                <ion-item>
+                        <ion-icon name="help" color="primary" item-left></ion-icon>
+                        <h2>Help</h2>
+                        <p>FAQ, Provide Feedback, Customer Support</p>
+                </ion-item>
+                <ion-item>
+                        <ion-icon name="information" color="primary" item-left></ion-icon>
+                        <h2>App Info</h2>
+                        <p>Privacy & Terms, Build & Updates</p>
+                </ion-item>
+        </ion-list>
+</ion-content>

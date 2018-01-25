@@ -1,0 +1,15 @@
+dashboard
+.toolbar-md {
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.toolbar .searchbar-md {
+  width: calc(100% - 8px);
+  margin: 0 auto;
+}
+
+.indicator.button-md-primary {
+  transition: all 0.1s linear !important;
+}

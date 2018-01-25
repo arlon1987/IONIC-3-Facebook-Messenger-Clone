@@ -1,0 +1,53 @@
+$primary: #387ef5;
+chat-list {
+  ion-content .scroll-content {
+    border: 0px !important; // prevents the border seen on refresh pull
+  }
+  ion-avatar {
+    img {
+      padding: 1.5px;
+      &.offline {
+        //border: 2px solid gray;
+      }
+      &.online {
+        //border: 1.5px solid $primary;
+      }
+    }
+    ion-icon {
+      position: absolute;
+      bottom: 15px;
+      left: 45px;
+      font-size: 60% !important;
+      background: white;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+  }
+
+  p.last-message.true:before {
+    content: "You: ";
+  }
+
+  .read-status.delivered:before {
+    content: "\f111"; // fa-circle
+    font-family: FontAwesome;
+    color: $primary;
+    line-height: 25px;
+  }
+  .read-status.read:before {
+    content: "\f058"; // fa-check-circle
+    font-family: FontAwesome;
+    color: $primary;
+    line-height: 25px;
+  }
+  .read-status.sent:before {
+    content: "\f10c"; // circle-o
+    font-family: FontAwesome;
+    color: $primary;
+    line-height: 25px;
+
+    .platform-browser & {
+      font-size: 150%; // but not working :(
+    }
+  }
+}

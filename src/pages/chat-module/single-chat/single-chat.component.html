@@ -1,0 +1,57 @@
+<ion-header>
+        <ion-navbar color="primary">
+                <ion-title>
+                <p>
+                        John doe
+                </p>
+                <small>Active 5 mins ago</small>
+                </ion-title>
+                <ion-buttons end>
+                        <button ion-button icon-only>
+                                <ion-icon name="call"></ion-icon>
+                        </button>
+                        <button ion-button icon-only>
+                                <ion-icon name="videocam" mode="ios"></ion-icon>
+                        </button>
+                        <button ion-button icon-only (click)="presentPopover($event)">
+                                <ion-icon name="more"></ion-icon>
+                        </button>
+                </ion-buttons>
+        </ion-navbar>
+</ion-header>
+<ion-content>
+        <ion-list no-lines>
+                <ion-item class="received" no-padding>
+                        <ion-avatar item-left>
+                                <img src="assets/images/avatars/a10.jpg">
+                        </ion-avatar>
+                        <p item-left class="message-content">what are you up to?</p>
+                </ion-item>
+                <ion-item class="sent">
+                        <p class="message-content" item-right>not much really </p>
+                </ion-item>
+                <ion-item class="received">
+                        <ion-avatar item-left>
+                                <img src="assets/images/avatars/a10.jpg">
+                        </ion-avatar>
+                        <p item-left class="message-content">would you like to check out the hunger games?</p>
+                </ion-item>
+                <ion-item class="received">
+                        <ion-avatar item-left>
+                                <img src="assets/images/avatars/a10.jpg">
+                        </ion-avatar>
+                        <p item-left class="message-content">it's showing tonight</p>
+                </ion-item>
+                <ion-item *ngFor="let message2 of messages2">
+                        {{ message }}
+                </ion-item>
+                <ion-item class="session-start">
+                        <p text-center>March 14th, 9:04pm</p>
+                </ion-item>
+                <ion-item class="sent">
+                        <p class="message-content" item-right>okay</p>
+                </ion-item>
+        </ion-list>
+</ion-content>
+
+<chatbox></chatbox> 

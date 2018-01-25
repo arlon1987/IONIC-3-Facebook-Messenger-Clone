@@ -1,0 +1,44 @@
+<ion-content>
+        <div padding>
+                <ion-segment mode="ios" [(ngModel)]="mfilter">
+                        <ion-segment-button value="messenger">
+                                MESSENGER
+                        </ion-segment-button>
+                        <ion-segment-button value="active">
+                                ACTIVE
+                        </ion-segment-button>
+                </ion-segment>
+        </div>
+
+        <ion-list no-lines>
+                <ion-item>
+                        <ion-icon item-left color="primary" name="chatbubbles"></ion-icon>
+                        <h2>Message Requests</h2>
+                        <ion-badge item-right color="primary">1</ion-badge>
+                </ion-item>
+                <ion-item>
+                        <ion-icon item-left color="primary" class="fa fa-envelope"></ion-icon>
+                        <h2>Invite People</h2>
+                </ion-item>
+                <ion-item>
+                        <ion-icon item-left color="primary" name="qr-scanner"></ion-icon>
+                        <h2>Scan messenger code</h2>
+                </ion-item>
+                <ion-item>
+                        <ion-icon item-left color="primary" class="fa fa-comments"></ion-icon>
+                        <h2>Make Messenger your SMS app</h2>
+                </ion-item>
+        </ion-list>
+
+        <ion-list-header>Top Contacts</ion-list-header>
+        <ion-list no-lines>
+                <ion-item *ngFor="let contact of contacts">
+                        <ion-avatar item-left (click)="gotoProfile()">
+                                <img src="{{contact.otherAvatar}}" [ngClass]="contact.otherOnlineStatus">
+                        </ion-avatar>
+                        <h2 (click)="opencontact(contact.otherName)">{{contact.otherName}}</h2>
+                        <p (click)="opencontact(contact.otherName)">@user.name</p>
+                        <ion-icon name="alert" color="primary" item-right></ion-icon>
+                </ion-item>
+        </ion-list>
+</ion-content>

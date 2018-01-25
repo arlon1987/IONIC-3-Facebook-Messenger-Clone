@@ -1,0 +1,22 @@
+messenger-contacts {
+  ion-segment-button:last-child:before {
+    content: "";
+    position: absolute;
+    background: white;
+    top: 0;
+    left: -6px;
+    bottom: 0;
+    width: 12px;
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -ms-transform: skew(20deg);
+    transform: skew(20deg);
+  }
+  ion-segment-button:last-child {
+    overflow: visible;
+  }
+
+  .fa {
+    font-size: 1.4em;
+  }
+}

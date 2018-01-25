@@ -1,0 +1,23 @@
+account-page {
+  ion-content.content-md {
+    background-color: #f9f9f9;
+    
+    .profile-pic {
+      background: #f9f9f9;
+      ion-avatar {
+        img {
+          border: 8px double #777;
+          margin: 0 auto;
+          height: 150px;
+          width: 150px;
+        }
+      }
+    }
+
+    ion-list {
+      margin-bottom: 15px;
+      border-bottom: 1px solid #aaa;
+      box-shadow: 0 0 1px #aaa;
+    }
+  }
+}

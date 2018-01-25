@@ -1,0 +1,29 @@
+smc {
+    input.text-input.text-input-md, 
+    input.text-input.text-input-md::placeholder {
+                color: white !important;
+    }
+    ion-avatar {
+      img {
+        padding: 1.5px;
+        &.offline {
+          //border: 2px solid gray;
+        }
+        &.online {
+          //border: 1.5px solid $primary;
+        }
+      }
+      ion-icon {
+        position: absolute;
+        bottom: 15px;
+        left: 45px;
+        font-size: 60% !important;
+        background: white;
+        border-radius: 50%;
+        border: 2px solid white;
+      }
+    }
+  .username::before {
+    content: "@";
+  }
+}

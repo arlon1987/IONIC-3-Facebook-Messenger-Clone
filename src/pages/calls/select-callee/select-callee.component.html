@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Make a Call</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-input type="text" placeholder="Search for someone to call" autofocus></ion-input>
+    <ion-list-header>All contacts</ion-list-header>
+    <ion-list no-lines>
+                <ion-item *ngFor="let contact of contacts">
+                        <ion-avatar item-left (click)="openChat(contact.otherName)">
+                                <img src="{{contact.otherAvatar}}" [ngClass]="contact.otherOnlineStatus">
+                                <ion-icon class="fa fa-check-circle" color="primary"></ion-icon>
+                        </ion-avatar>
+                        <h2 (click)="openChat(contact.otherName)">{{contact.otherName}}</h2>
+                        <p class="username">{{contact.otherUsername}}</p>    
+                        <ion-icon (click)="startPhoneCall()" class="call-icons phone" color="primary" name="call" item-right></ion-icon>
+                        <ion-icon (click)="startVideoCall()" class="call-icons" color="primary" name="videocam" item-right mode="ios"></ion-icon>
+                </ion-item>
+        </ion-list>
+</ion-content>
